@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Add a Plant</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header>
+                    <h1>Add a Plant!</h1>
+                </header>
+                <section>
+                    <form id="insertPlantForm" action="../insert_plant.php" method="POST">
+                        <fieldset id="SKU_details">
+                            <legend>SKU Details</legend>
+
+                            <div class="formQuestion">
+                                <label for="plant_id"><b>PID:</b></label>
+                                <input type="text" placeholder="ex. P01" name="plant_id" required><br>
+                            </div>
+
+                            <div class="formQuestion">
+                                <label for="plant_name">Name of the plant:</label>
+                                <input type="text" placeholder="Enter Plant Name" name="plant_name" required><br>
+                            </div>
+
+                            <div class="formQuestion">
+                                <label for="aisle">Located on aisle:</label>
+                                <input type="number" placeholder="Enter Aisle Number" name="aisle" required><br>
+                            </div>
+
+                            <div class="formQuestion">
+                                <label for="price">Price:</label>
+                                <input type="number" placeholder="Enter Price" name="price" step="0.01" required><br>
+                            </div>
+
+                            <div class="formQuestion">
+                                <label for="stock">In Stock:</label>
+                                <input type="number" placeholder="Enter Quantity" name="stock" step="1" required><br>
+                            </div>
+
+                            <div class="formQuestion">
+                                <label for="max_quantity">Max Quantity:</label>
+                                <input type="number" placeholder="Enter Max Quantity" name="max_quantity" step="1" required><br>
+                            </div>
+
+                        </fieldset> <br>
+
+                        <fieldset id="plant_details">
+                            <legend>Plant Details</legend>
+
+                            <label for="country">Country of origin:</label>
+                            <input type="text" placeholder="Enter Country of Origin" name="country" required><br>
+
+                            <hr>
+
+                            <label for="water">Water Requirement:</label><br>
+                            <textarea rows = "5" cols = "50" name = "water" placeholder="Enter Water Requirements..." required></textarea><br>
+
+                            <label for="sunlight">Sunlight Requirement:</label><br>
+                            <textarea rows = "5" cols = "50" name = "sunlight" placeholder="Enter Sunlight Requirements..." required></textarea><br>
+
+                            <hr>
+
+                            <label>Please select all appropriate descriptors:</label><br>
+                            <input type="checkbox" id="indoor" name="indoor" value="True">
+                            <label for="indoor"> Indoor Plant</label><br>
+                            <input type="checkbox" id="outdoor" name="outdoor" value="True">
+                            <label for="outdoor"> Outdoor Plant</label><br>
+                            <input type="checkbox" id="poisonous" name="poisonous" value="True">
+                            <label for="poisonous"> Poisonous</label><br>
+                            <input type="checkbox" id="edible" name="edible" value="True">
+                            <label for="edible"> Edible</label><br>
+                        </fieldset>
+
+                        <div style="text-align: center;">
+                            <button type="submit" id="addPlantButton">Add Plant</button>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button id="cancelButton"><a href="index.html" style="text-decoration: none; color: black">Cancel</a></button>
+                        </div>
+
+                    </form>
+                </section>
+            </div> <!-- content wrap -->
+
+            <footer id="footer">
+                <p>&copy; 2022 ThePlantShop</p>
+            </footer>
+        </div> <!-- paige container -->
+    </body>
+</html>
